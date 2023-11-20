@@ -10,10 +10,10 @@ public class Plot : MonoBehaviour
     private GameObject tower;
     private Color startColor;
 
-    private vopid OnMouseEnter() {
+    private void OnMouseEnter() {
         sr.color = sr.color;
     }
-    private vopid OnMouseExit() {
+    private void OnMouseExit() {
         sr.color = startColor;
     }
 
