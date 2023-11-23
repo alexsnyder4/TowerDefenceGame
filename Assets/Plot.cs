@@ -10,8 +10,12 @@ public class Plot : MonoBehaviour
     private GameObject tower;
     private Color startColor;
 
+    private void Start()
+    {
+        startColor = sr.color;
+    }
     private void OnMouseEnter() {
-        sr.color = sr.color;
+        sr.color = hoverColor;
     }
     private void OnMouseExit() {
         sr.color = startColor;
