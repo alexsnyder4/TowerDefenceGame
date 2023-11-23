@@ -23,8 +23,8 @@ public class Plot : MonoBehaviour
 
     private void OnMouseDown() {
         if(tower != null) return;
-
+        Vector3 offset = new Vector3(1.95f, -0.65f, 0f);
         GameObject towerToBuild = BuildManager.main.GetSelectedTower();
-        tower = Instantiate(towerToBuild, transform.position, Quaternion.identity);
+        tower = Instantiate(towerToBuild, transform.position + offset, Quaternion.identity);
     }
 }
