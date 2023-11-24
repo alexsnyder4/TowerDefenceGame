@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300002, guid: 39cb76c66c061d4409a73136dcd23e30, type: 3}
+  m_Sprite: {fileID: 21300002, guid: e2e1d2286197c3144b141c3fbf922434, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -117,7 +117,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7059122045843054941}
   m_Layer: 0
-  m_Name: MageTower
+  m_Name: Test Tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
