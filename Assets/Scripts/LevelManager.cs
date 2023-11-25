@@ -11,6 +11,9 @@ public class LevelManager : MonoBehaviour
     [SerializeField]
     public Transform[] path;
 
+    [SerializeField]
+    public bool menuOpen;
+
     public int currency;
     private void Awake()
     {
