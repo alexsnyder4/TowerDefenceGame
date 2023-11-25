@@ -173,7 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 84243659451696568}
-  moveSpeed: 3
+  moveSpeed: 2
 --- !u!114 &-7882207562953802118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,4 +186,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e54393a7c696bc64597f9497bfb3c9f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 2
+  hitPoints: 1
+  currencyWorth: 50

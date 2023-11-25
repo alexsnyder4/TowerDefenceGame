@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3892390159892267470}
   - component: {fileID: 4858584390507183494}
   m_Layer: 7
-  m_Name: MageBullet
+  m_Name: TestBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -182,5 +182,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 3892390159892267470}
-  bulletSpeed: 5
+  bulletSpeed: 10
   bulletDamage: 1

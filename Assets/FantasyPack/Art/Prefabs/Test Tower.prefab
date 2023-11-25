@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300002, guid: 58a66cd733755684c8c6635a293f233b, type: 3}
+  m_Sprite: {fileID: 21300002, guid: e2e1d2286197c3144b141c3fbf922434, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -102,11 +102,11 @@ MonoBehaviour:
   enemyMask:
     serializedVersion: 2
     m_Bits: 64
-  bulletPrefab: {fileID: 7862818803942893174, guid: 28b8689367e753d48a71762fbd95c9fe, type: 3}
+  bulletPrefab: {fileID: 7862818803942893174, guid: 6da53dd9c0a7b5e439a484c4648650cb, type: 3}
   firingPoint: {fileID: 8535333159905671790}
-  targetingRange: 2
+  targetingRange: 10
   rotationSpeed: 200
-  bps: 1
+  bps: 1.5
 --- !u!1 &5333172539805770976
 GameObject:
   m_ObjectHideFlags: 0
@@ -117,7 +117,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7059122045843054941}
   m_Layer: 0
-  m_Name: MageTower
+  m_Name: Test Tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
