@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -89,8 +90,17 @@ public class EnemySpawner : MonoBehaviour
 
     private void SpawnEnemy()
     {
-        GameObject prefabToSpawn = enemyPrefabs[0];
-        Instantiate(prefabToSpawn, LevelManager.main.startPoint.position, Quaternion.identity);
+        if (currentWave <= 2)
+        {
+            GameObject prefabToSpawn = enemyPrefabs[0];
+            Instantiate(prefabToSpawn, LevelManager.main.startPoint.position, Quaternion.identity);
+        }
+        else
+        {
+            int randNum = Random.Range(0, 2);
+            GameObject prefabToSpawn = enemyPrefabs[randNum];
+            Instantiate(prefabToSpawn, LevelManager.main.startPoint.position, Quaternion.identity);
+        }
     }
 
     private int EnemiesPerWave()
