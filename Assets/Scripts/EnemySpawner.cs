@@ -59,8 +59,9 @@ public class EnemySpawner : MonoBehaviour
             timeSinceLastSpawn = 0;
         }
 
-        if(enemiesAlive == 0 && enemiesLeftToSpawn == 0)
+        if(enemiesAlive <= 0 && enemiesLeftToSpawn == 0)
         {
+            enemiesAlive = 0;
             EndWave();
         }
     }
@@ -74,6 +75,10 @@ public class EnemySpawner : MonoBehaviour
     private IEnumerator StartWave()
     {
         yield return new WaitForSeconds(timeBetweenWaves);
+        if (enemiesPerSecond < 6f)
+        {
+            enemiesPerSecond = enemiesPerSecond * 1.25f;
+        }
 
         isSpawning = true; 
         enemiesLeftToSpawn = EnemiesPerWave();
