@@ -104,9 +104,15 @@ MonoBehaviour:
     m_Bits: 64
   bulletPrefab: {fileID: 7862818803942893174, guid: 28b8689367e753d48a71762fbd95c9fe, type: 3}
   firingPoint: {fileID: 8535333159905671790}
+  spriteRenderer: {fileID: 1787458619422684}
   targetingRange: 2
   rotationSpeed: 200
   bps: 1
+  sprites:
+  - {fileID: 21300056, guid: 39cb76c66c061d4409a73136dcd23e30, type: 3}
+  - {fileID: 21300056, guid: 39cb76c66c061d4409a73136dcd23e30, type: 3}
+  - {fileID: 21300052, guid: 39cb76c66c061d4409a73136dcd23e30, type: 3}
+  - {fileID: 21300052, guid: 39cb76c66c061d4409a73136dcd23e30, type: 3}
 --- !u!1 &5333172539805770976
 GameObject:
   m_ObjectHideFlags: 0
