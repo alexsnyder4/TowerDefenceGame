@@ -9,6 +9,22 @@ public class Health : MonoBehaviour
 
     [SerializeField] private int currencyWorth = 50;
 
+
+    private Animator anim;
+
+    private void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
+
+    private IEnumerator DeathEvent()
+    {
+        Debug.Log("In death anim coroutine now");
+        anim.SetTrigger("death");
+        yield return new WaitForSeconds(0.2f);
+        Destroy(gameObject);
+    }
+
     public void TakeDamage(int damage)
     {
         hitPoints -= damage;
@@ -18,7 +34,7 @@ public class Health : MonoBehaviour
         {
             EnemySpawner.onEnemyDestroy.Invoke();
             LevelManager.main.IncreaseCurrency(currencyWorth);
-            Destroy(gameObject);
+            StartCoroutine(DeathEvent());
             
         }
     }

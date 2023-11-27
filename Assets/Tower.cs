@@ -41,8 +41,6 @@ public class Tower : MonoBehaviour
             return;
         }
 
-        //RotateTowardsTarget();
-
         if(!CheckTargetIsInRange())
         {
             target = null;
