@@ -38,8 +38,6 @@ public class Tower : MonoBehaviour
             return;
         }
 
-        
-
         if(!CheckTargetIsInRange())
         {
             target = null;
