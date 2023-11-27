@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -58,8 +59,9 @@ public class EnemySpawner : MonoBehaviour
             timeSinceLastSpawn = 0;
         }
 
-        if(enemiesAlive == 0 && enemiesLeftToSpawn == 0)
+        if(enemiesAlive <= 0 && enemiesLeftToSpawn == 0)
         {
+            enemiesAlive = 0;
             EndWave();
         }
     }
@@ -73,6 +75,10 @@ public class EnemySpawner : MonoBehaviour
     private IEnumerator StartWave()
     {
         yield return new WaitForSeconds(timeBetweenWaves);
+        if (enemiesPerSecond < 6f)
+        {
+            enemiesPerSecond = enemiesPerSecond * 1.25f;
+        }
 
         isSpawning = true; 
         enemiesLeftToSpawn = EnemiesPerWave();
@@ -89,8 +95,17 @@ public class EnemySpawner : MonoBehaviour
 
     private void SpawnEnemy()
     {
-        GameObject prefabToSpawn = enemyPrefabs[0];
-        Instantiate(prefabToSpawn, LevelManager.main.startPoint.position, Quaternion.identity);
+        if (currentWave <= 2)
+        {
+            GameObject prefabToSpawn = enemyPrefabs[0];
+            Instantiate(prefabToSpawn, LevelManager.main.startPoint.position, Quaternion.identity);
+        }
+        else
+        {
+            int randNum = Random.Range(0, 2);
+            GameObject prefabToSpawn = enemyPrefabs[randNum];
+            Instantiate(prefabToSpawn, LevelManager.main.startPoint.position, Quaternion.identity);
+        }
     }
 
     private int EnemiesPerWave()
