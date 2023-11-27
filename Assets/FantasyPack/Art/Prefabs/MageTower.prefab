@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6902389014957909200}
   - component: {fileID: 1787458619422684}
   - component: {fileID: 3060783905535053381}
+  - component: {fileID: 2335090817569211891}
   m_Layer: 0
   m_Name: Mage
   m_TagString: Untagged
@@ -105,14 +106,32 @@ MonoBehaviour:
   bulletPrefab: {fileID: 7862818803942893174, guid: 28b8689367e753d48a71762fbd95c9fe, type: 3}
   firingPoint: {fileID: 8535333159905671790}
   spriteRenderer: {fileID: 1787458619422684}
+  anim: {fileID: 0}
   targetingRange: 2
   rotationSpeed: 200
   bps: 1
-  sprites:
-  - {fileID: 21300056, guid: 39cb76c66c061d4409a73136dcd23e30, type: 3}
-  - {fileID: 21300056, guid: 39cb76c66c061d4409a73136dcd23e30, type: 3}
-  - {fileID: 21300052, guid: 39cb76c66c061d4409a73136dcd23e30, type: 3}
-  - {fileID: 21300052, guid: 39cb76c66c061d4409a73136dcd23e30, type: 3}
+  sprites: []
+--- !u!95 &2335090817569211891
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4840020503055061792}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ff75dcf39d9de6341a4480eb5ed9c3db, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5333172539805770976
 GameObject:
   m_ObjectHideFlags: 0

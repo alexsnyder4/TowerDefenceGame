@@ -15,7 +15,8 @@ public class Tower : MonoBehaviour
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private Transform firingPoint;
     [SerializeField] private SpriteRenderer spriteRenderer;
-
+    [SerializeField] private Animator anim;
+ 
     [Header("Attribute")]
     [SerializeField] private float targetingRange = 5f;
     [SerializeField] private float rotationSpeed = 200f;
@@ -28,12 +29,14 @@ public class Tower : MonoBehaviour
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
     }
 
     private void Update() 
     {
         if(target == null)
         {
+            
             FindTarget();
             return;
         }
@@ -100,7 +103,9 @@ public class Tower : MonoBehaviour
         }
         else
         {
-            spriteRenderer.sprite = sprites[2];
+            anim.SetBool("isIdle", true);
+            anim.SetInteger("isCasting", 0);
+            //spriteRenderer.sprite = sprites[2];
         }
     }
 
@@ -109,22 +114,26 @@ public class Tower : MonoBehaviour
             if (angle >= -45 && angle < 45)
             {
                  // Bottom right
+                anim.SetInteger("isCasting", 1);
                 spriteRenderer.flipX = true;
                 return 3;
             }
             else if (angle >= 45 && angle < 135)
             {
                  // Top right
+                anim.SetInteger("isCasting", 2);
                 spriteRenderer.flipX = true;
                 return 1;
             }
             else if (angle >= -135 && angle < -45)
             {
+                anim.SetInteger("isCasting", 1);
                 spriteRenderer.flipX = false;
                 return 2; // Bottom left
             }
             else
             {
+                anim.SetInteger("isCasting", 2);
                 spriteRenderer.flipX = false;
                 return 0; // Top left
             }
@@ -133,6 +142,6 @@ public class Tower : MonoBehaviour
 
     void SwitchSprite(int quadrant)
     {
-        spriteRenderer.sprite = sprites[quadrant];
+        //spriteRenderer.sprite = sprites[quadrant];
     }
 }
