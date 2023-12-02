@@ -15,12 +15,11 @@ public class Tower : MonoBehaviour
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private Transform firingPoint;
     [SerializeField] private SpriteRenderer spriteRenderer;
-
+    [SerializeField] private Animator anim;
+ 
     [Header("Attribute")]
     [SerializeField] private float targetingRange = 5f;
-    [SerializeField] private float rotationSpeed = 200f;
     [SerializeField] private float bps = 1f; //Bullets per second
-    [SerializeField] public Sprite[] sprites;
 
     private Transform target;
     private float timeUntilFire;
@@ -28,12 +27,15 @@ public class Tower : MonoBehaviour
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
     }
 
     private void Update() 
     {
         if(target == null)
         {
+            anim.SetBool("isIdle", true);
+            anim.SetInteger("isCasting", 0);
             FindTarget();
             return;
         }
@@ -44,20 +46,50 @@ public class Tower : MonoBehaviour
         } 
         else 
         {
+            if(timeUntilFire <= 0)
+            {
+                Shoot();
+            }
             timeUntilFire += Time.deltaTime;
             if (timeUntilFire >=1f/bps)
             {
-                Shoot();
-                timeUntilFire = 0f;
+                
+
+            
+            timeUntilFire = 0f; // Reset the timer immediately
+
+            // Shoot immediately and then wait for the next time interval
+            Shoot();
             }
+        }
+        if(target != null)
+        { 
+            
+        }
+        else
+        {
+            
+            //spriteRenderer.sprite = sprites[2];
         }
     }
 
     private void Shoot()
     {
+        Vector3 directionToEnemy = target.transform.position - transform.position;
+        float angle1 = Mathf.Atan2(directionToEnemy.y, directionToEnemy.x);
+
+        float angleInDegrees = angle1 * Mathf.Rad2Deg;
+        GetQuadrant(angleInDegrees);
         GameObject bulletObj = Instantiate(bulletPrefab, firingPoint.position, Quaternion.identity);
         Bullet bulletScript = bulletObj.GetComponent<Bullet>();
-        bulletScript.SetTarget(target);
+        Vector3 directionToTarget = target.position - firingPoint.position;
+        float angle = Mathf.Atan2(directionToTarget.y, directionToTarget.x) * Mathf.Rad2Deg;
+
+        // Set the rotation of the bullet to point towards the target
+        bulletScript.transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, angle - 180));
+
+        // Pass the target to the bullet script
+        bulletScript.SetTarget(target);    
     }
     private void FindTarget()
     {
@@ -73,7 +105,7 @@ public class Tower : MonoBehaviour
         float angle = Mathf.Atan2(target.position.y - transform.position.y, target.position.x - transform.position.x) * Mathf.Rad2Deg;
 
         Quaternion targetRotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
-        turretRotationPoint.rotation = Quaternion.RotateTowards(turretRotationPoint.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+        turretRotationPoint.rotation = Quaternion.RotateTowards(turretRotationPoint.rotation, targetRotation, Time.deltaTime);
     }
 
     private void OnDrawGizmosSelected()
@@ -86,20 +118,7 @@ public class Tower : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if(target != null)
-        { 
-        Vector3 directionToEnemy = target.transform.position - transform.position;
-        float angle = Mathf.Atan2(directionToEnemy.y, directionToEnemy.x);
-
-        float angleInDegrees = angle * Mathf.Rad2Deg;
-
-        int quadrant = GetQuadrant(angleInDegrees);
-        SwitchSprite(quadrant);
-        }
-        else
-        {
-            spriteRenderer.sprite = sprites[2];
-        }
+        
     }
 
     private int GetQuadrant(float angle)
@@ -107,30 +126,29 @@ public class Tower : MonoBehaviour
             if (angle >= -45 && angle < 45)
             {
                  // Bottom right
+                anim.SetInteger("isCasting", 1);
                 spriteRenderer.flipX = true;
                 return 3;
             }
             else if (angle >= 45 && angle < 135)
             {
                  // Top right
+                anim.SetInteger("isCasting", 2);
                 spriteRenderer.flipX = true;
                 return 1;
             }
             else if (angle >= -135 && angle < -45)
             {
+                anim.SetInteger("isCasting", 1);
                 spriteRenderer.flipX = false;
                 return 2; // Bottom left
             }
             else
             {
+                anim.SetInteger("isCasting", 2);
                 spriteRenderer.flipX = false;
                 return 0; // Top left
             }
                 
         }
-
-    void SwitchSprite(int quadrant)
-    {
-        spriteRenderer.sprite = sprites[quadrant];
-    }
 }
