@@ -44,6 +44,12 @@ TagManager:
   - name: Front
     uniqueID: 2760276921
     locked: 0
+  - name: Shadows
+    uniqueID: 488998715
+    locked: 0
+  - name: Enemies&Towers
+    uniqueID: 122680747
+    locked: 0
   - name: New Layer 4
     uniqueID: 3462415299
     locked: 0

@@ -72,8 +72,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 122680747
+  m_SortingLayer: 3
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300002, guid: e2e1d2286197c3144b141c3fbf922434, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -104,8 +104,9 @@ MonoBehaviour:
     m_Bits: 64
   bulletPrefab: {fileID: 7862818803942893174, guid: 6da53dd9c0a7b5e439a484c4648650cb, type: 3}
   firingPoint: {fileID: 8535333159905671790}
+  spriteRenderer: {fileID: 0}
+  anim: {fileID: 0}
   targetingRange: 10
-  rotationSpeed: 200
   bps: 1.5
 --- !u!1 &5333172539805770976
 GameObject:
@@ -241,11 +242,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 122680747
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300066, guid: 58a66cd733755684c8c6635a293f233b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.76862746}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
