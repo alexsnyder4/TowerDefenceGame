@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 6902389014957909200}
   - component: {fileID: 1787458619422684}
   - component: {fileID: 3060783905535053381}
-  - component: {fileID: 6904877624599109214}
+  - component: {fileID: 2335090817569211891}
   m_Layer: 0
-  m_Name: Mage
+  m_Name: SwordTower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300002, guid: 39cb76c66c061d4409a73136dcd23e30, type: 3}
+  m_Sprite: {fileID: 21300002, guid: c2ab6f31701821140a722465e85f3918, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -106,10 +106,10 @@ MonoBehaviour:
   bulletPrefab: {fileID: 5076710012751314286, guid: bb9007cdfed9c5045af0a8cd3d75e791, type: 3}
   firingPoint: {fileID: 8535333159905671790}
   spriteRenderer: {fileID: 1787458619422684}
-  anim: {fileID: 0}
-  targetingRange: 2
+  anim: {fileID: 2335090817569211891}
+  targetingRange: 1.4
   bps: 1
---- !u!95 &6904877624599109214
+--- !u!95 &2335090817569211891
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -119,7 +119,7 @@ Animator:
   m_GameObject: {fileID: 4840020503055061792}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ff75dcf39d9de6341a4480eb5ed9c3db, type: 2}
+  m_Controller: {fileID: 9100000, guid: 780ffa3cd81629e46a865f1bdffda711, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -140,7 +140,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7059122045843054941}
   m_Layer: 0
-  m_Name: MageTower
+  m_Name: SwordTower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
