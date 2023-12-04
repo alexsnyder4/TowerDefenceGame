@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class EnemySpawner : MonoBehaviour
 {
@@ -34,6 +35,8 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField]
     private bool isSpawning = false;
 
+    [SerializeField]
+    public Text waveCounter;
     private void Awake()
     {
         onEnemyDestroy.AddListener(EnemyDestroyed);
@@ -64,6 +67,8 @@ public class EnemySpawner : MonoBehaviour
             enemiesAlive = 0;
             EndWave();
         }
+
+        waveCounter.text = "Wave: " + currentWave.ToString();
     }
 
 
