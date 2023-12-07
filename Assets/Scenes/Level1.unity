@@ -108137,7 +108137,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Wave: 0'
+  m_Text: 'Wave: '
 --- !u!222 &1765867985
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -113391,7 +113391,7 @@ MonoBehaviour:
   enemiesAlive: 0
   enemiesLeftToSpawn: 0
   isSpawning: 0
-  waveCounter: {fileID: 0}
+  waveCounter: {fileID: 1765867984}
 --- !u!114 &1954186333
 MonoBehaviour:
   m_ObjectHideFlags: 0
