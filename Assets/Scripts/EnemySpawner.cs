@@ -57,8 +57,9 @@ public class EnemySpawner : MonoBehaviour
         if(timeSinceLastSpawn >= (1f / enemiesPerSecond) && enemiesLeftToSpawn > 0)
         {
             SpawnEnemy();
-            enemiesLeftToSpawn--;
             enemiesAlive++;
+            enemiesLeftToSpawn--;
+            
             timeSinceLastSpawn = 0;
         }
 
@@ -79,8 +80,9 @@ public class EnemySpawner : MonoBehaviour
 
     private IEnumerator StartWave()
     {
-        enemiesAlive = 0;
         yield return new WaitForSeconds(timeBetweenWaves);
+        enemiesAlive = 0;
+
         if (enemiesPerSecond < 4f)
         {
             enemiesPerSecond = enemiesPerSecond * 1.15f;
@@ -118,7 +120,7 @@ public class EnemySpawner : MonoBehaviour
             GameObject prefabToSpawn = enemyPrefabs[2];
             Instantiate(prefabToSpawn, LevelManager.main.startPoint.position, Quaternion.identity);
         }
-        else if (currentWave >= 10)
+        else if (currentWave > 10)
         {
             int randNum = Random.Range(0, 6);
             Debug.Log("random Num is : " + randNum);

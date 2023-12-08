@@ -48,7 +48,7 @@ public class Tower : MonoBehaviour
         {
             if(timeUntilFire <= 0)
             {
-                Shoot();
+                //Shoot();
             }
             timeUntilFire += Time.deltaTime;
             if (timeUntilFire >=1f/bps)
@@ -112,6 +112,7 @@ public class Tower : MonoBehaviour
     {
         Handles.color = Color.cyan;
         Handles.DrawWireDisc(transform.position, transform.forward, targetingRange);
+        
     }
     private bool CheckTargetIsInRange() {
         return Vector2.Distance(target.position, transform.position) <= targetingRange;

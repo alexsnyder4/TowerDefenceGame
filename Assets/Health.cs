@@ -9,6 +9,7 @@ public class Health : MonoBehaviour
 
     [SerializeField] private int currencyWorth = 50;
 
+    private bool isDestroyed = false;
 
     private Animator anim;
 
@@ -30,9 +31,10 @@ public class Health : MonoBehaviour
         hitPoints -= damage;
 
         
-        if (hitPoints <= 0 )
+        if (hitPoints <= 0 && !isDestroyed)
         {
             EnemySpawner.onEnemyDestroy.Invoke();
+            isDestroyed = true;
             LevelManager.main.IncreaseCurrency(currencyWorth);
             StartCoroutine(DeathEvent());
             
