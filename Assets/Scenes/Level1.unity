@@ -14609,9 +14609,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Spear
-
-'
+  m_Text: Spear
 --- !u!222 &672189911
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -113391,7 +113389,7 @@ MonoBehaviour:
   enemiesAlive: 0
   enemiesLeftToSpawn: 0
   isSpawning: 0
-  waveCounter: {fileID: 0}
+  waveCounter: {fileID: 1765867984}
 --- !u!114 &1954186333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114723,12 +114721,12 @@ MonoBehaviour:
     m_MinSize: 0
     m_MaxSize: 50
     m_Alignment: 4
-    m_AlignByGeometry: 0
+    m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Sword '
+  m_Text: Sword
 --- !u!222 &2016276405
 CanvasRenderer:
   m_ObjectHideFlags: 0
