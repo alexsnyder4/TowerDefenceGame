@@ -16,12 +16,22 @@ public class Bullet : MonoBehaviour
     
     public void SetTarget(Transform _target)
     {
+        if (_target == null)
+        {
+            Destroy(gameObject);
+            Debug.Log("Trying to destroy the bullet because tager is null");
+            return ;
+        }
         target = _target;
     }
 
     private void FixedUpdate() 
     {
-        if(!target) return;
+        if (!target)
+        {
+            Destroy(gameObject);
+            return;
+        }
 
         Vector2 direction = (target.position - transform.position).normalized;
 

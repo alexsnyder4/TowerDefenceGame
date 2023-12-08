@@ -9,13 +9,16 @@ public class Plot : MonoBehaviour
     [SerializeField] private Color hoverColor;
     private GameObject tower;
     private Color startColor;
+    private GameObject child;
 
     private void Start()
     {
         startColor = sr.color;
+  
     }
     private void OnMouseEnter() {
         sr.color = hoverColor;
+        
     }
     private void OnMouseExit() {
         sr.color = startColor;
@@ -24,7 +27,21 @@ public class Plot : MonoBehaviour
     private void OnMouseDown() {
         
         Debug.Log(Input.mousePosition);
-        if (tower != null) return;
+        if (tower != null)
+        {
+            
+            child = tower.transform.Find("RangeShadow").gameObject;
+            if (child.activeSelf == false)
+            {
+                child.SetActive(true);
+            }
+            else
+            {
+                child.SetActive(false);
+            }
+
+            return;
+        }
 
         Vector3 offset = new Vector3(1.95f, -0.65f, 0f);
         TowerInfo towerToBuild = BuildManager.main.GetSelectedTower();

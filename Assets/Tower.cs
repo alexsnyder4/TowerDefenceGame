@@ -48,7 +48,7 @@ public class Tower : MonoBehaviour
         {
             if(timeUntilFire <= 0)
             {
-                Shoot();
+                //Shoot();
             }
             timeUntilFire += Time.deltaTime;
             if (timeUntilFire >=1f/bps)
