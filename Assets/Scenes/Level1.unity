@@ -14573,8 +14573,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -86.51999}
-  m_SizeDelta: {x: 150, y: -87.41002}
+  m_AnchoredPosition: {x: 0, y: -80}
+  m_SizeDelta: {x: 150, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &672189910
 MonoBehaviour:
@@ -22879,8 +22879,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -86.51999}
-  m_SizeDelta: {x: 150, y: -87.41}
+  m_AnchoredPosition: {x: 0, y: -80}
+  m_SizeDelta: {x: 150, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1057501281
 MonoBehaviour:
@@ -27765,7 +27765,7 @@ MonoBehaviour:
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 150, y: 150}
-  m_Spacing: {x: 50, y: 50}
+  m_Spacing: {x: 50, y: 70}
   m_Constraint: 0
   m_ConstraintCount: 2
 --- !u!4 &1264114703 stripped
@@ -106926,6 +106926,7 @@ GameObject:
   - component: {fileID: 1708903079}
   - component: {fileID: 1708903078}
   - component: {fileID: 1708903077}
+  - component: {fileID: 1708903080}
   m_Layer: 5
   m_Name: Mage Tower
   m_TagString: Untagged
@@ -107047,6 +107048,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1708903075}
   m_CullTransparentMesh: 1
+--- !u!114 &1708903080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1708903075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5e97fdfea0a7164bad47e80f9e33448, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 1057501281}
+  tower:
+    towerName: Mage
+    towerCost: 850
+    prefab: {fileID: 0}
 --- !u!4 &1709287113 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9174599803619795712, guid: dc04db07bac53f84694445c860b8b4bd, type: 3}
@@ -114530,6 +114548,7 @@ GameObject:
   - component: {fileID: 2010184811}
   - component: {fileID: 2010184810}
   - component: {fileID: 2010184809}
+  - component: {fileID: 2010184812}
   m_Layer: 5
   m_Name: Spear Tower
   m_TagString: Untagged
@@ -114651,6 +114670,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2010184807}
   m_CullTransparentMesh: 1
+--- !u!114 &2010184812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2010184807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5e97fdfea0a7164bad47e80f9e33448, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 672189910}
+  tower:
+    towerName: Spear
+    towerCost: 600
+    prefab: {fileID: 0}
 --- !u!4 &2014459113 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9174599803619795712, guid: dc04db07bac53f84694445c860b8b4bd, type: 3}
@@ -114690,8 +114726,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -86.51999}
-  m_SizeDelta: {x: 150, y: -87.41}
+  m_AnchoredPosition: {x: 0, y: -80}
+  m_SizeDelta: {x: 150, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2016276404
 MonoBehaviour:
@@ -117328,6 +117364,7 @@ GameObject:
   - component: {fileID: 2134535106}
   - component: {fileID: 2134535105}
   - component: {fileID: 2134535104}
+  - component: {fileID: 2134535107}
   m_Layer: 5
   m_Name: Sword Tower
   m_TagString: Untagged
@@ -117449,6 +117486,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2134535102}
   m_CullTransparentMesh: 1
+--- !u!114 &2134535107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134535102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5e97fdfea0a7164bad47e80f9e33448, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 2016276404}
+  tower:
+    towerName: Sword
+    towerCost: 450
+    prefab: {fileID: 0}
 --- !u!1001 &2136362252
 PrefabInstance:
   m_ObjectHideFlags: 0
