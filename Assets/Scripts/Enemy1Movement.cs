@@ -15,6 +15,8 @@ public class Enemy1Movement : MonoBehaviour
     private Transform target;
     private int pathIndex = 0;
 
+    private float baseSpeed;
+
     private Animator animator;
 
     private SpriteRenderer sr;
@@ -22,6 +24,7 @@ public class Enemy1Movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        baseSpeed = moveSpeed;
         target = LevelManager.main.path[pathIndex];
         animator = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
@@ -77,5 +80,21 @@ public class Enemy1Movement : MonoBehaviour
         }
 
         rb.velocity = direction * moveSpeed;
+    }
+
+
+    public void UpdateSpeed(float newSpeed)
+    {
+        moveSpeed = newSpeed;
+    }
+
+    public void ResetSpeed()
+    {
+        moveSpeed = baseSpeed;
+    }
+
+    public float GetSpeed()
+    {
+        return moveSpeed;
     }
 }

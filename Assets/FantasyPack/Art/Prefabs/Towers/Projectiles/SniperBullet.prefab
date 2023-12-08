@@ -185,6 +185,7 @@ MonoBehaviour:
   rb: {fileID: 3892390159892267470}
   bulletSpeed: 15
   bulletDamage: 2
+  freezeEffect: 1
 --- !u!114 &-7458995225613019904
 MonoBehaviour:
   m_ObjectHideFlags: 0

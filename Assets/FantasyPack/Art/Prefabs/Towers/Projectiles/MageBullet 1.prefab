@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300068, guid: 58a66cd733755684c8c6635a293f233b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.50377357, g: 1, b: 0.9851038, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -185,7 +185,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 8614653845943177713}
   bulletSpeed: 7.5
-  bulletDamage: 1
+  bulletDamage: 0
+  freezeEffect: 0.75
 --- !u!114 &1177726276541929010
 MonoBehaviour:
   m_ObjectHideFlags: 0
