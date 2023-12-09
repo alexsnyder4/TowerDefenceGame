@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7624019531653986809}
   - component: {fileID: 8614653845943177713}
   - component: {fileID: 6811793146344013144}
+  - component: {fileID: 1177726276541929010}
   m_Layer: 7
   m_Name: MageBullet 1
   m_TagString: Untagged
@@ -77,7 +78,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300068, guid: 58a66cd733755684c8c6635a293f233b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.50377357, g: 1, b: 0.9851038, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -184,4 +185,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 8614653845943177713}
   bulletSpeed: 7.5
-  bulletDamage: 1
+  bulletDamage: 0
+  freezeEffect: 0.75
+--- !u!114 &1177726276541929010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5076710012751314286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40a2e8a5e1cffa74fba9bf8d828347db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

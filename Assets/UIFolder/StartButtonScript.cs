@@ -27,4 +27,14 @@ public class StartButtonScript : MonoBehaviour
     {
         SceneManager.LoadScene("Level1");
     }
+
+    public void Level2Click()
+    {
+        SceneManager.LoadScene("Level2");
+    }
+
+    public void ReturnToLevelSelect()
+    {
+        SceneManager.LoadScene("LevelSelect");
+    }
 }

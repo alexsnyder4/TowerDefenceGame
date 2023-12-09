@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 2820514426845259913}
   - component: {fileID: 3892390159892267470}
   - component: {fileID: 4858584390507183494}
+  - component: {fileID: -7458995225613019904}
   m_Layer: 7
-  m_Name: TestBullet
+  m_Name: SniperBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,7 +78,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300068, guid: 58a66cd733755684c8c6635a293f233b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7299905, g: 0.8018868, b: 0.26779988, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -182,5 +183,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 3892390159892267470}
-  bulletSpeed: 10
-  bulletDamage: 1
+  bulletSpeed: 15
+  bulletDamage: 2
+  freezeEffect: 1
+--- !u!114 &-7458995225613019904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7862818803942893174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40a2e8a5e1cffa74fba9bf8d828347db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
