@@ -9,6 +9,7 @@ public class Health : MonoBehaviour
 
     [SerializeField] private int currencyWorth = 50;
 
+
     private bool isDestroyed = false;
 
     private Animator anim;
