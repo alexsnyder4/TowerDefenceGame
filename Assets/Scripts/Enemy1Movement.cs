@@ -28,6 +28,9 @@ public class Enemy1Movement : MonoBehaviour
         target = LevelManager.main.path[pathIndex];
         animator = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
+
+
+        
     }
 
     // Update is called once per frame
@@ -41,6 +44,7 @@ public class Enemy1Movement : MonoBehaviour
             {
                 EnemySpawner.onEnemyDestroy.Invoke();
                 Destroy(gameObject);
+                LevelManager.main.KingdomHit();
                 return;
             }
             else
@@ -48,6 +52,7 @@ public class Enemy1Movement : MonoBehaviour
                 target = LevelManager.main.path[pathIndex];
             }
         }
+        
     }
 
     private void FixedUpdate()
