@@ -57,7 +57,7 @@ public class LevelManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Not enough to purchase"); //will tie into UI eventually
+
             return false;
         }
     }

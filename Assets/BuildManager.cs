@@ -23,7 +23,7 @@ public class BuildManager : MonoBehaviour
 
     public void SetSelectedTower(int _selectedTower)
     {
-        Debug.Log("Selectedtower" +  _selectedTower);
+
         selectedTower = _selectedTower;
     }
 }

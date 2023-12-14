@@ -47,9 +47,6 @@ TagManager:
   - name: Shadows
     uniqueID: 488998715
     locked: 0
-  - name: Enemies&Towers
-    uniqueID: 122680747
-    locked: 0
   - name: New Layer 4
     uniqueID: 3462415299
     locked: 0
@@ -67,6 +64,9 @@ TagManager:
     locked: 0
   - name: New Layer 3
     uniqueID: 1903842729
+    locked: 0
+  - name: Enemies&Towers
+    uniqueID: 122680747
     locked: 0
   - name: UI
     uniqueID: 1905641015

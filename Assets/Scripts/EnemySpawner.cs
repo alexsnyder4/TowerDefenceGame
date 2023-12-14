@@ -123,7 +123,7 @@ public class EnemySpawner : MonoBehaviour
         else if (currentWave > 10)
         {
             int randNum = Random.Range(0, 6);
-            Debug.Log("random Num is : " + randNum);
+            
             int numChoice;
             if (randNum <= 2)
             {
@@ -137,7 +137,7 @@ public class EnemySpawner : MonoBehaviour
             {
                 numChoice = 2;
             }
-            Debug.Log("numChoice is : " + numChoice);
+            
             GameObject prefabToSpawn = enemyPrefabs[numChoice];
             Instantiate(prefabToSpawn, LevelManager.main.startPoint.position, Quaternion.identity);
         }

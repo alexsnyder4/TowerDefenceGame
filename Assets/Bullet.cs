@@ -41,7 +41,7 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        Debug.Log("Collided with " + other);
+
         other.gameObject.GetComponent<Health>().TakeDamage(bulletDamage);
         Destroy(gameObject);
         Color origColor = other.gameObject.GetComponent<SpriteRenderer>().color;

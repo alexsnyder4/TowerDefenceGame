@@ -48,7 +48,7 @@ public class Plot : MonoBehaviour
 
         if (towerToBuild.towerCost > LevelManager.main.currency)
         {
-                Debug.Log("You cant afford this tower"); //will tie into a UI message eventually
+                
                 return;
         }
 
