@@ -27965,8 +27965,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2134535103}
   - {fileID: 2010184808}
+  - {fileID: 2134535103}
   - {fileID: 1708903076}
   m_Father: {fileID: 290681794}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -113737,12 +113737,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towers:
-  - towerName: Sword Tower
-    towerCost: 450
-    prefab: {fileID: 5333172539805770976, guid: 482bf503521eb0346a627a377858a7c3, type: 3}
   - towerName: Spear Tower
     towerCost: 600
     prefab: {fileID: 389380779101757890, guid: 44e881a3a60643f47b5f6f1babcc2869, type: 3}
+  - towerName: Sword Tower
+    towerCost: 450
+    prefab: {fileID: 5333172539805770976, guid: 482bf503521eb0346a627a377858a7c3, type: 3}
   - towerName: Mage Tower
     towerCost: 850
     prefab: {fileID: 5333172539805770976, guid: efb5593aef2ce48459ff02f501983d93, type: 3}
@@ -114943,7 +114943,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -117260,7 +117260,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SHOP
+  m_Text: Menu
 --- !u!222 &2114529886
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -117702,7 +117702,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
