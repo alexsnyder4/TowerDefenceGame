@@ -32,6 +32,10 @@ public class StartButtonScript : MonoBehaviour
     {
         SceneManager.LoadScene("Level2");
     }
+    public void Level3Click()
+    {
+        SceneManager.LoadScene("Level3");
+    }
 
     public void ReturnToLevelSelect()
     {
