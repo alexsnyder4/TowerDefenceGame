@@ -62,7 +62,7 @@ public class Enemy1Movement : MonoBehaviour
         
         if (direction.x > 0 && direction.y < 0)
         {
-            Debug.Log(direction);
+           
             animator.SetInteger("MvmtDirection", 0);
             sr.flipX = true;
         }
