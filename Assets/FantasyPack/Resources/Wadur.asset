@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Wadur
   m_EditorClassIdentifier: 
   m_Sprite: {fileID: 21300004, guid: e969b0c0a2203ee4c846eaf2203e00af, type: 3}
-  m_Color: {r: 0.33490568, g: 0.60064, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.5019608, b: 1, a: 0.9019608}
   m_Transform:
     e00: 1
     e01: 0

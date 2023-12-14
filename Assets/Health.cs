@@ -21,7 +21,7 @@ public class Health : MonoBehaviour
 
     private IEnumerator DeathEvent()
     {
-        Debug.Log("In death anim coroutine now");
+
         anim.SetTrigger("death");
         yield return new WaitForSeconds(0.2f);
         Destroy(gameObject);
