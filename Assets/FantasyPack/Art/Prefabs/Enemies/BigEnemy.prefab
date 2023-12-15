@@ -273,7 +273,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 50
-  currencyWorth: 50
+  currencyWorth: 60
 --- !u!95 &456843185431738293
 Animator:
   serializedVersion: 5

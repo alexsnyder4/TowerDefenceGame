@@ -39,7 +39,11 @@ public class LevelManager : MonoBehaviour
         {
             HPtext.text = "HP: " + kingdomHP.ToString();
         }
-        if(kingdomHP == 0)
+        else
+        {
+            HPtext.text = "HP: 0";
+        }
+        if(kingdomHP <= 0)
         {
             loseText.text = "YOU LOSE";
             loseText.enabled = true;
