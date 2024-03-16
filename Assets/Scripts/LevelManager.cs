@@ -35,8 +35,15 @@ public class LevelManager : MonoBehaviour
     }
     public void Update()
     {
-        HPtext.text = "HP: " + kingdomHP.ToString();
-        if(kingdomHP == 0)
+        if (kingdomHP >= 0)
+        {
+            HPtext.text = "HP: " + kingdomHP.ToString();
+        }
+        else
+        {
+            HPtext.text = "HP: 0";
+        }
+        if(kingdomHP <= 0)
         {
             loseText.text = "YOU LOSE";
             loseText.enabled = true;
@@ -62,9 +69,20 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    public void KingdomHit()
+    public void KingdomHit(string enemyTag)
     {
-        kingdomHP--;
+        if (enemyTag == "White")
+        {
+            kingdomHP--;
+        }
+        else if (enemyTag == "Yellow")
+        {
+            kingdomHP = kingdomHP - 2;
+        }
+        else if (enemyTag == "Red")
+        {
+            kingdomHP = kingdomHP - 5;
+        }
     }
 
     IEnumerator BackTimer(float waitTime)

@@ -43,8 +43,9 @@ public class Enemy1Movement : MonoBehaviour
             if (pathIndex == LevelManager.main.path.Length)
             {
                 EnemySpawner.onEnemyDestroy.Invoke();
+                string enemyTag = gameObject.tag;
                 Destroy(gameObject);
-                LevelManager.main.KingdomHit();
+                LevelManager.main.KingdomHit(enemyTag);
                 return;
             }
             else

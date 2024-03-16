@@ -108,19 +108,19 @@ public class EnemySpawner : MonoBehaviour
             GameObject prefabToSpawn = enemyPrefabs[0];
             Instantiate(prefabToSpawn, LevelManager.main.startPoint.position, Quaternion.identity);
         }
-        else if (currentWave > 2 && currentWave <= 9)
+        else if (currentWave > 2 && currentWave <= 4)
         {
             int randNum = Random.Range(0, 2);
             GameObject prefabToSpawn = enemyPrefabs[randNum];
             Instantiate(prefabToSpawn, LevelManager.main.startPoint.position, Quaternion.identity);
         }
-        else if (currentWave == 10)
+        else if (currentWave == 5)
         {
             enemiesLeftToSpawn = 1;
             GameObject prefabToSpawn = enemyPrefabs[2];
             Instantiate(prefabToSpawn, LevelManager.main.startPoint.position, Quaternion.identity);
         }
-        else if (currentWave > 10)
+        else if (currentWave > 5 && currentWave <= 8)
         {
             int randNum = Random.Range(0, 6);
             
@@ -138,6 +138,27 @@ public class EnemySpawner : MonoBehaviour
                 numChoice = 2;
             }
             
+            GameObject prefabToSpawn = enemyPrefabs[numChoice];
+            Instantiate(prefabToSpawn, LevelManager.main.startPoint.position, Quaternion.identity);
+        }
+        else if (currentWave >= 9)
+        {
+            int randNum = Random.Range(0, 6);
+
+            int numChoice;
+            if (randNum <= 1)
+            {
+                numChoice = 0;
+            }
+            else if (randNum > 1 && randNum <= 3)
+            {
+                numChoice = 1;
+            }
+            else
+            {
+                numChoice = 2;
+            }
+
             GameObject prefabToSpawn = enemyPrefabs[numChoice];
             Instantiate(prefabToSpawn, LevelManager.main.startPoint.position, Quaternion.identity);
         }
