@@ -149,3 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sr: {fileID: 975757011541491350}
   hoverColor: {r: 0.49056602, g: 0.49056602, b: 0.49056602, a: 0.53333336}
+  menuItemsRectTransforms:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
