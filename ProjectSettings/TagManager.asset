@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Red
+  - Yellow
+  - White
   layers:
   - Default
   - TransparentFX
@@ -11,8 +14,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Enemy
+  - Bullet
   - 
   - 
   - 
@@ -41,12 +44,33 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Background
-    uniqueID: 1233430411
+  - name: Front
+    uniqueID: 2760276921
     locked: 0
-  - name: Plots
-    uniqueID: 996366459
+  - name: Shadows
+    uniqueID: 488998715
     locked: 0
-  - name: Characters
-    uniqueID: 1950866541
+  - name: New Layer 4
+    uniqueID: 3462415299
+    locked: 0
+  - name: New Layer 5
+    uniqueID: 3033257681
+    locked: 0
+  - name: New Layer 6
+    uniqueID: 697170013
+    locked: 0
+  - name: New Layer 7
+    uniqueID: 373114395
+    locked: 0
+  - name: New Layer 8
+    uniqueID: 2295010001
+    locked: 0
+  - name: New Layer 3
+    uniqueID: 1903842729
+    locked: 0
+  - name: Enemies&Towers
+    uniqueID: 122680747
+    locked: 0
+  - name: UI
+    uniqueID: 1905641015
     locked: 0
